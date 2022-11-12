@@ -1,8 +1,11 @@
 <section id="content" class="zerogrid">
-  <div class="sub-page">
-    <h2 style="text-align: center">Test Compopnent</h2>
+  <div class="sub-page surrounded">
+
+    <!-- >String Interpolation -->
+    <h2 style="text-align: center">String Interpolation</h2>
 
     <h4>{{ xyz }} {{ pqr }}</h4>
+
 
     <!-- Property Binding -->
     <hr/>
@@ -11,5 +14,43 @@
     <p [title]="x">Title Attribute Show</p>
     <p [innerHTML]="x">Another Attribute Show</p>
     <button [disabled]="status==false">Click Here</button>
+
+    <!-- Event Binding --> <hr/>
+    <h2 style="text-align: center">Event Binding</h2>
+    <button (click)="show(xyz)" >Click Here for message</button>
+
+    <!-- Two Way Binding --> <hr/>
+    <h2 style="text-align: center">Two Way Binding</h2>
+    Enter <input type="text" name="fname" [(ngModel)]="fname" > <br>
+    Show result: <h3> {{fname}} </h3>
+
+    <!-- directive --> <hr/>
+    <h2 style="text-align: center">Directives: [ngSwitch] | *ngFor="" | *ngIf=""    </h2>
+
+    <!-- <h3 *ngIf="fruits.length>0" >
+        {{fruits.length}}
+    </h3> -->
+
+    <div [ngSwitch]="fruits.length">
+        <p *ngSwitchCase="0"> Total Fruits  {{fruits.length}} </p>
+        <p *ngSwitchCase="1"> Total Fruits  {{fruits.length}} </p>
+        <p *ngSwitchCase="2"> Total Fruits  {{fruits.length}} </p>
+        <p *ngSwitchCase="3"> Total Fruits  {{fruits.length}} </p>
+        <p *ngSwitchCase="4"> Total Fruits  {{fruits.length}} </p>
+        <p *ngSwitchCase="5"> Total Fruits  {{fruits.length}} </p>
+        <p *ngSwitchDefault> More Fruits Are Available  </p>
+
+    </div>
+
+    <!-- directive --> <hr/>
+    <h2 style="text-align: center">Directives: Attribute [ngStyle] [ngClass] </h2>
+    <div [ngStyle]="{'font-size':'24px', 'color':'green'}" >
+        My Division Style [ngStyle]
+    </div>
+
+    <p class="p1">Custom Style from File</p>
+
+    <p [ngClass]="p2" >From Component Style </p>
+
   </div>
 </section>

@@ -1,0 +1,18 @@
+.p1{
+    font-size:24px;
+    color:purple;
+}
+
+.p2Class{
+    font-size:24px;
+    color:rgb(128, 60, 0);
+    border: 1px solid green;
+    padding: 10px;
+    width: 300px;
+}
+.surrounded{
+    
+    padding: 20px;
+    
+}
+
